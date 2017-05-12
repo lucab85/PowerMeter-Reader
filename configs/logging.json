@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+        "detailed": {
+            "format": "%(asctime)s %(name)s:%(levelname)s %(module)s:%(lineno)d:  %(message)s"
+        }
+    },
+
+    "handlers": {
+        "handler_console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "handler_file_errors": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "detailed",
+            "filename": "logs/errors.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf-8"
+        },
+        "handler_file_powermeter": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "detailed",
+            "filename": "logs/powermeter.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf-8"
+        },
+        "handler_file_utils": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "detailed",
+            "filename": "logs/utils.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf-8"
+        }
+    },
+    
+    "loggers": {
+        "utils": {
+            "level": "DEBUG",
+            "handlers": ["handler_console", "handler_file_utils"],
+            "propagate": 0
+        },
+        "powermeter": {
+            "level": "DEBUG",
+            "handlers": ["handler_console", "handler_file_powermeter"],
+            "propagate": 0
+        }
+    },
+
+    "root": {
+        "level": "ERROR",
+        "handlers": ["handler_file_errors"]
+    }
+}
+

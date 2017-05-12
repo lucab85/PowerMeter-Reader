@@ -1,0 +1,55 @@
+#chiave;Address;Size;Type
+Meter Name;30;20;utf8
+Meter Model;50;20;utf8
+Manufacturer;70;20;utf8
+Serial Number;130;2;uint32
+Date of Manufacture;132;4;datetime
+Hardware Revision;136;5;utf8
+Firmware Version;1637;1;uint16
+YYYY;1845;1;uint16
+MM-WW-GG;1846;1;raw
+HH-MM;1847;1;raw
+MS;1848;1;raw
+Meter Operation Timer;2004;2;uint32
+Number of Phases;2014;1;uint16
+Number of Wires;2015;1;uint16
+Power System;2016;1;uint16
+Nominal Frequency;2017;1;uint16
+Number VTs;2025;1;uint16
+VT Primary;2026;2;float32
+VT Secondary;2028;1;uint16
+Number CTs;2029;1;uint16
+CT Primary;2030;1;uint16
+CT Secondary;2031;1;uint16
+VT Connection Type;2036;1;uint16
+Energy Pulse Duration;2129;1;uint16
+Digital Output Association;2131;1;uint16
+Pulse Weight;2132;2;float32
+Protocol;6500;1;uint16
+Address;6501;1;uint16
+Baud Rate;6502;1;uint16
+Parity:;6503;1;uint16
+Input Label;7032;20;utf8
+Input Pulse Constant;7052;2;float32
+Input Digital Input Association;7055;1;uint16
+Digital Input Control Mode;7274;1;uint16
+Digital Input Status;8905;2;bitmap
+Digital Output Control Mode Status;9673;1;uint16
+L1Current;3000;2;float32
+L2Current;3002;2;float32
+L3Current;3004;2;float32
+L1Voltage;3028;2;float32
+L2Voltage;3030;2;float32
+L3Voltage;3032;2;float32
+L1Active;3054;2;float32
+L2Active;3056;2;float32
+L3Active;3058;2;float32
+TotalActivePW;3060;2;float32
+TotalReactivePW;3068;2;float32
+TotalApparentPW;3076;2;float32
+TotalPowerFactor;3084;2;float32
+FREQ;3110;2;float32
+TotalActiveEnergy;3204;4;int64
+TotalReactiveEnergy;3220;4;int64
+PartialActiveEnergy;3256;4;int64
+PartialReactiveEnergy;3272;4;int64
